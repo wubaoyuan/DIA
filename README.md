@@ -13,7 +13,12 @@ Some results and statistics
 Our model
 ----
 
-Semantic Paths
-----
+##Semantic Paths
+
+
+##Sampling
+
+
+
 
 
