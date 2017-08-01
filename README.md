@@ -2,6 +2,10 @@
  
 This project introduces our work "Diverse Image Annotation" published at CVPR 2017. 
 
+'''
+asf kjls af seg h
+'''
+
 We propose a new task called diverse image annotation (DIA) to redefine the current automatic image annotation (AIA), to encourage the results of AIA to be more close to human annotations. 
 The goal of most existing AIA models is to predict most relevant tags of the image. 
 However, we have observed that there is a obvious gap between the results of AIA and the ones of human annotations. 
