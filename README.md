@@ -25,8 +25,10 @@ the image, but also diverse from each other to reduce redundancy.
 
 Human Annotations
 ----
+
 Some results and statistics
-![](https://github.com/wubaoyuan/DIA/tree/master/figures/human_annotation_toy_example.png)
+![fig](https://github.com/wubaoyuan/DIA/tree/master/figures/tag_statistics_500_images_3_persons.pdf)
+
 Our model
 ----
 
