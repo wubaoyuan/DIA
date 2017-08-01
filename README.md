@@ -13,7 +13,7 @@ It requires the tags to be not only representative to
 the image, but also diverse from each other to reduce redundancy. DIA can be seen as a redefinition of the automatic image annotation (AIA), to encourage the results of AIA to be more close to human annotations.
 
 
-Why Diverse Image Annotation & Observations of Human Annotations
+Motivations from Observations of Human Annotations
 ----
 In current automatic image annotation (AIA), the general target is to predict most relevant tags of the image. 
 However, we find that there are obvious differences between the results of AIA and the ones of human annotations, 
@@ -44,13 +44,16 @@ This demonstrates that both the collection of the ground-truth tag subsets in be
 Now it is clear that the gap between AIA and human annotation is due to the tag redundancy. Another word to describe the avoiding of tag redundancy is diversity, which encourages different tags to cover different contents. Thus, we can summarize that human annotators considers both relevance and diversity, while AIA only considers the relevance. This is why we propose DIA to refined the current AIA. 
 
 
-Our model
+Model
 ----
 
-##Semantic Paths
+#### Conditional Determinantal Point Process Model
+Determinantal point process (DPP) is a probabilistic model to formulate the diversity of a subset.
+Treating the image annotation as a subset selection problem, and the image as the condition, the 
+conditional DPP is adopted to formulate DIA.
 
+#### Semantic Paths
 
-##Sampling
 
 
 
