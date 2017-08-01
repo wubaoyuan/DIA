@@ -51,9 +51,9 @@ Model
 Determinantal point process (DPP) is a probabilistic model to formulate the diversity of a subset. 
 Treating the image annotation as a subset selection problem and the image as the condition, the 
 conditional DPP is adopted to formulate DIA, as follows:
-$$
+`$$
 \mathcal{P}_{\mathbf{W}}(\mathcal{Y}|\mathbf{x}) = \frac{ \text{det}(\mathbf{L}_{Y}(\mathbf{x}; \mathbf{W}))}{\text{det}(\mathbf{L}(\mathbf{x}; \mathbf{W}) + \mathbf{I})}
-$$
+$$`
 
 <!-- \frac{det(\mathbf{L}_{\mathcal{Y}}(\mathbf{x}; \mathbf{W}))}{det(\mathbf{L}(\mathbf{x}; \mathbf{W}) + \mathbf{I})} -->
 
