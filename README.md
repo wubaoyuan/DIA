@@ -54,7 +54,7 @@ conditional DPP is adopted to formulate DIA, as follows:
 $$
 \mathcal{P}_{\mathbf{W}}(\mathcal{Y}|\mathbf{x}) = \frac{ \text{det}(\mathbf{L}\_{\mathcal{Y}}(\mathbf{x}; \mathbf{W}))}{\text{det}(\mathbf{L}(\mathbf{x}; \mathbf{W}) + \mathbf{I})}
 $$
-where $\mathbf{x}$ denotes the feature vector of the image, $\mathcal{Y} \subset \mathcal{T} = {1, 2, \ldots, m }$ is the tag subset, with $\mathcal{T}$ being the set of all $m$ candidate tags. 
+where $\mathbf{x}$ denotes the feature vector of the image, $\mathcal{Y} \subset \mathcal{T} = \\{1, 2, \ldots, m \\}$ is the tag subset, with $\mathcal{T}$ being the set of all $m$ candidate tags. 
 
 #### Semantic Paths
 
