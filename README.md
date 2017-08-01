@@ -27,9 +27,9 @@ Based on the human annotation results, we have two observations:
 ```
 <!-- ![](figures/human_annotation_toy_example.png) -->
 <img src="figures/human_annotation_toy_example.png" alt="GitHub" title="Human Annotations" width="400" height="140" /> | 
-<img src="figures/tag_statistics_500_images_3_persons.png" alt="GitHub" title="Tag statistics" width="400" height="150" /> 
+<img src="figures/tag_statistics_500_images_3_persons.png" alt="GitHub" title="Tag statistics" width="430" height="145" /> 
 
-Fig 1. Three independent human annotations of one image       Fig 2. Statistics of tag numbers of three human annotators
+Fig 1. Three independent human annotations of one image        Fig 2. Statistics of tag numbers of three human annotators
 <!--
 <img src="figures/human_annotation_toy_example.png" alt="GitHub" title="Human Annotations" width="350" height="150" />
 Fig 1. Three independent human annotations of one image
@@ -48,9 +48,12 @@ Model
 ----
 
 #### Conditional Determinantal Point Process Model
-Determinantal point process (DPP) is a probabilistic model to formulate the diversity of a subset.
-Treating the image annotation as a subset selection problem, and the image as the condition, the 
-conditional DPP is adopted to formulate DIA.
+Determinantal point process (DPP) is a probabilistic model to formulate the diversity of a subset. 
+Treating the image annotation as a subset selection problem and the image as the condition, the 
+conditional DPP is adopted to formulate DIA, as follows:
+$$
+x=\frac{-b\pm\sqrt{b^2-4ac}}{2a})
+$$
 
 #### Semantic Paths
 
