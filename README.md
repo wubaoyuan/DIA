@@ -24,7 +24,7 @@ Based on the human annotation results, we have two observations:
 1. The number of annotated tags of all annotations lay in a small range, with the average around 4 (see Fig 1).
 2. In each annotation, it is rare to give redundant tags together (see Fig 2).
 ```
-![](figures/human_annotation_toy_example.png)
+![](figures/human_annotation_toy_example.png =100x20)
 
 
 
