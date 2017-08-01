@@ -2,9 +2,11 @@
  
 This project introduces our work "Diverse Image Annotation" published at CVPR 2017. 
 
-'''
-asf kjls af seg h
-'''
+```
+Baoyuan Wu, Fan Jia, Wei Liu, Bernard Ghanem. 
+Diverse Image Annotation.
+IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2017), Honolulu, Hawaii, USA 
+```
 
 We propose a new task called diverse image annotation (DIA) to redefine the current automatic image annotation (AIA), to encourage the results of AIA to be more close to human annotations. 
 The goal of most existing AIA models is to predict most relevant tags of the image. 
