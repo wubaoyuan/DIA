@@ -52,7 +52,7 @@ Determinantal point process (DPP) is a probabilistic model to formulate the dive
 Treating the image annotation as a subset selection problem and the image as the condition, the 
 conditional DPP is adopted to formulate DIA, as follows:
 $$
-\mathcal{P}_{\mathbf{W}}(\mathcal{Y}|\mathbf{x}) = 
+\mathcal{P}_{\mathbf{W}}(\mathcal{Y}|\mathbf{x}) = \frac{det(\mathbf{L}_{\mathcal{Y}}(\mathbf{x}; \mathbf{W}))}{d}
 $$
 
 #### Semantic Paths
