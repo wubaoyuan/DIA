@@ -61,10 +61,12 @@ $\mathbf{L}\_{\mathcal{Y}}(\mathbf{x}; \mathbf{W})\in\mathbb{R}^{|\mathcal{Y}|\t
 
 $\text{det}(\mathbf{L}\_{\mathcal{Y}})$ indicates the determinant of $\mathbf{L}_{\mathcal{Y}}$, and it is good for encoding negative correlations. There is an elegant geometric illustration to help us to understand the meaning of determinantal.  
 
+```
 <img src="figures/L_decomposition.png" alt="GitHub" title="L_decomposition" width="400" height="140" /> | 
 <img src="figures/determinantal_volume.png" alt="GitHub" title="determinantal_volume" width="200" height="145" /> 
 
 Fig 3. (Left) The kernel matrix $\mathbf{L}$ is decomposed to quality $Q$ and diversity $S$. (Right) $\text{det}(\mathbf{L})$ corresponds to the volume of the blue area. 
+```
 
 #### Semantic Paths
 
