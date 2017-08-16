@@ -95,7 +95,7 @@ weighted semantic paths. Instead of calculating the scores on independent tags i
 compute the scores on the weighted semantic paths. The following is an brief example. You can find more 
 detailed definitions from our paper and the implementation from the folder ```code```. 
 
-<img src="figures/semantic_metrics.png" alt="GitHub" title="semantic paths" width="400" height="140" />
+<img src="figures/semantic_metrics.png" alt="GitHub" title="semantic paths" width="400" height="120" />
 Fig 5. An brief example of semantic metrics.
 
 
