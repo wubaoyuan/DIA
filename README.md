@@ -86,6 +86,7 @@ the next sampling until convergence; otherwise, adding it into the sampled tag s
 avoided that two tags from the same path are sampled together. 
 
 <img src="figures/semantic_paths.png" alt="GitHub" title="semantic paths" width="400" height="140" />
+Fig 4. An brief example of semantic hiearchy and semantic paths.
 
 #### Semantic Paths
 
