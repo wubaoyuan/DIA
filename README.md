@@ -67,7 +67,11 @@ $\text{det}(\mathbf{L}\_{\mathcal{Y}})$ indicates the determinant of $\mathbf{L}
 Fig 3. (Left) The kernel matrix $\mathbf{L}$ is decomposed to quality $Q$ and diversity $S$. (Right) $\text{det}(\mathbf{L})$ corresponds to the volume of the blue area. This figure is borrowed from the slides "Jose Miguel Hernandez-Lobato and Hong Ge, An introduction to
 Determinantal Point Process, 2014". 
 
-#### Learning
+Learning with DPP loss
+----
+
+Inference by k-DPP sampling with weighted semantic paths
+----
 
 
 
