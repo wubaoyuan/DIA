@@ -3,9 +3,12 @@
 This project introduces our work "Diverse Image Annotation" published at CVPR 2017. 
 
 ```
-Baoyuan Wu, Fan Jia, Wei Liu, Bernard Ghanem. 
-"Diverse Image Annotation".
-IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2017), Honolulu, Hawaii, USA 
+@inproceedings{wu-dia,
+  title={Diverse Image Annotation},
+  author={Wu, Baoyuan and Jia, Fan and Liu, Wei and Ghanem, Bernard},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  year={2017}
+}
 ```
 The goal of diverse image annotation (DIA) is to cover as much useful information of an
 image as possible using a limited number of tags. 
