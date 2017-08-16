@@ -3,9 +3,12 @@
 This project introduces our work "Diverse Image Annotation" published at CVPR 2017. 
 
 ```
-Baoyuan Wu, Fan Jia, Wei Liu, Bernard Ghanem. 
-"Diverse Image Annotation".
-IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2017), Honolulu, Hawaii, USA 
+@inproceedings{wu-dia,
+  title={Diverse Image Annotation},
+  author={Wu, Baoyuan and Jia, Fan and Liu, Wei and Ghanem, Bernard},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  year={2017}
+}
 ```
 The goal of diverse image annotation (DIA) is to cover as much useful information of an
 image as possible using a limited number of tags. 
@@ -41,7 +44,7 @@ Observation 1 demonstrates that the semantic reducdancy between tags is consider
 In constrast, from many benchmark datasets for AIA (such as ESP Game and IAPRTC-12), we find that in their ground-truth tag subsets: there are many redundant tags in the same tag subset (e.g., person and people); the averaged number of tags are larger than the ones of human annotations (see Fig 2). Consequently, the current AIA models that only consider the relevance and is trained on such benchmark datasets will predict the redundant tag subset with larger-size. 
 This demonstrates that both the collection of the ground-truth tag subsets in benchmark datasets and the learning target in current AIA only consider the relevance, while the redundancy between tags are ignored.  
 
-Now it is clear that the gap between AIA and human annotation is due to the tag redundancy. Another word to describe the avoiding of tag redundancy is diversity, which encourages different tags to cover different contents. Thus, we can summarize that human annotators considers both relevance and diversity, while AIA only considers the relevance. This is why we propose DIA to refined the current AIA. 
+Now it is clear that the gap between AIA and human annotation is due to the tag redundancy. Another word to describe the avoiding of tag redundancy is diversity, which encourages different tags to cover different contents. Thus, we can summarize that human annotators considers both relevance and diversity, while AIA only considers the relevance. This is why we propose DIA to redefine the current AIA. 
 
 
 Model
@@ -73,10 +76,16 @@ $$
 \mathcal{L}(\mathbf{W})  = - \frac{1}{n} \sum_j^n \log \mathcal{P}_{\mathbf{W}}(\mathcal{Y}_j|\mathbf{x}_j) + \frac{\eta}{2} \sum_i^m \parallel \mathbf{w}_i \parallel_2^2
 $$
 
+
 Inference by k-DPP sampling with weighted semantic paths
 ----
+We modify the standard k-DPP sampling process (see 'k-DPPs: Fixed-Size Determinantal Point Processes') 
+by inserting the weighted semantic paths. Specifically, during the sampling process, we check that whether 
+the newly sampled tag is from the same path with any existing sampled tag. If is, then discard it and do 
+the next sampling until convergence; otherwise, adding it into the sampled tag subset. Thus, it can be 
+avoided that two tags from the same path are sampled together. 
 
-
+<img src="figures/semantic_paths.png" alt="GitHub" title="semantic paths" width="400" height="140" />
 
 #### Semantic Paths
 
