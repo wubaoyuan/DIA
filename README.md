@@ -70,7 +70,7 @@ Determinantal Point Process, 2014".
 Learning with DPP loss
 ----
 $$
-\mathcal{L}(\mathbf{W})  = & - \frac{1}{n} \sum_j^n \log \mathcal{P}_{\mathbf{W}}(\mathcal{Y}_j|\mathbf{x}_j) + \frac{\eta}{2} \sum_i^m \parallel \mathbf{w}_i \parallel_2^2
+\mathcal{L}(\mathbf{W})  = - \frac{1}{n} \sum_j^n \log \mathcal{P}_{\mathbf{W}}(\mathcal{Y}_j|\mathbf{x}_j) + \frac{\eta}{2} \sum_i^m \parallel \mathbf{w}_i \parallel_2^2
 $$
 
 Inference by k-DPP sampling with weighted semantic paths
