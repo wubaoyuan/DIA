@@ -88,7 +88,15 @@ avoided that two tags from the same path are sampled together.
 <img src="figures/semantic_paths.png" alt="GitHub" title="semantic paths" width="400" height="140" />
 Fig 4. An brief example of semantic hiearchy and semantic paths.
 
-#### Semantic Paths
+Evaluation by semantic metrics
+----
+We propose three semantic metrics by modifying the traditional precision, recall and F1 according to the 
+weighted semantic paths. Instead of calculating the scores on independent tags in traditional metrics, we 
+compute the scores on the weighted semantic paths. The following is an brief example. You can find more 
+detailed definitions from our paper and the implementation from the folder ```code```. 
+
+<img src="figures/semantic_metrics.png" alt="GitHub" title="semantic paths" width="400" height="120" />
+Fig 5. An brief example of semantic metrics.
 
 
 
