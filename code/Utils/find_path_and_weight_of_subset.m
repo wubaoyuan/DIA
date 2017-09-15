@@ -139,7 +139,7 @@ end
 remove_index = []; 
 for i = 1:numel(semantic_path_cell_of_subset)-1
     path_i = semantic_path_cell_of_subset{i};
-    for j = i+1
+    for j = i+1:numel(semantic_path_cell_of_subset)
         path_j = semantic_path_cell_of_subset{j};
         if ~isempty(intersect(path_i, path_j))
             if numel(path_i) < numel(path_j)
