@@ -14,7 +14,13 @@ num_class = numel(semantic_hierarchy_structure.class_name);
 same_meaning_pair = semantic_hierarchy_structure.same_meaning_pair; 
 ancestor_cell = semantic_hierarchy_structure.ancestor_cell;
 descendant_cell = semantic_hierarchy_structure.descendant_cell;
-
+%{
+descendant_cell{14} = 58;
+semantic_hierarchy_structure.descendant_cell = descendant_cell;
+ancestor_cell{230} = 99;
+semantic_hierarchy_structure.ancestor_cell = ancestor_cell;
+save([data_name, '_semantic_hierarchy_structure.mat'], 'semantic_hierarchy_structure');
+%}
 %-------------------------------------------------------------------------- 
 % construct the semantic path based on the semantic hierarchy graph, and same_meaning_pair
 semantic_path_cell = {
@@ -377,8 +383,11 @@ tic
 for i = 1: num_sample_train
     subset_i = find(label_train_full(:, i)==1); 
     if ~isempty(subset_i)
-        [path_cell_i, weight_cell_i] = find_path_and_weight_of_subset( ...
+        [path_cell_i, weight_cell_i] = find_path_and_weight_of_subset_new( ...
                  subset_i, SH_and_SP_structure);
+        if ~isempty(find([weight_cell_i{:}] > 1))
+           i
+        end
         semantic_path_and_weight_cell_train(i).path = path_cell_i; 
         semantic_path_and_weight_cell_train(i).weight = weight_cell_i;
     else
@@ -399,8 +408,11 @@ tic
 for i = 1: num_sample_test
     subset_i = find(label_test_full(:, i)==1); 
     if ~isempty(subset_i)
-        [path_cell_i, weight_cell_i] = find_path_and_weight_of_subset( ...
+        [path_cell_i, weight_cell_i] = find_path_and_weight_of_subset_new( ...
                  subset_i, SH_and_SP_structure);
+        if ~isempty(find([weight_cell_i{:}] > 1))
+           i
+        end
         semantic_path_and_weight_cell_test(i).path = path_cell_i; 
         semantic_path_and_weight_cell_test(i).weight = weight_cell_i; 
     else

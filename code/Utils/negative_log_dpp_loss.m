@@ -47,6 +47,7 @@ if strcmp(mode, 'objective')
     %--------------  compute the objective function, forward
     for t = 1 : numInstance
         qVec = double(qMat(:, t));
+        qVec = min(100, qVec);
         yt = Y(:,t) == 1; 
         L = (qVec * qVec') .* S; % m x m, the kernel matrix L
         Ly = L(yt , yt);
@@ -59,6 +60,7 @@ elseif strcmp(mode, 'gradient')
     %--------------  compute the gradient over Theta, backward
     for t = 1 : numInstance
         qVec = qMat(:, t);
+        qVec = min(100, qVec);
         L = (qVec * qVec') .* S; % m x m, the kernel matrix
         [V,D] = eig(L);
         d = real(diag(D)); % m x 1 

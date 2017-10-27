@@ -24,13 +24,13 @@ class_name = semantic_hierarchy_structure.class_name;
 weight_of_each_class = semantic_path_structure.weight_of_each_class; 
 
 %% load the learned parameter Theta
-Thete_file = dir(['result\', data_name, '\', data_name, '_Theta_*']');
+Thete_file = dir(['result\', data_name, '\', data_name, '_Theta*']);
 load(Thete_file.name); % result_struct_Theta_obj
 Theta = result_struct_Theta_obj.Theta;
 S = result_struct_Theta_obj.S;
 
 num_instance= size(feature_matrix,1);
-X = single([feature_matrix'; ones(1, num_instance)./result_struct_Theta_obj.params.biasFactor]); 
+X = single([feature_matrix'; ones(1, num_instance)./result_struct_Theta_obj.options.biasFactor]); 
 logit = Theta' * X; 
 qMat = exp(0.5 .* logit);
 

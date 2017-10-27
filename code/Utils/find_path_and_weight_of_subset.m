@@ -160,5 +160,37 @@ for i = 1:numel(semantic_path_cell_of_subset)-1
 end
 semantic_path_cell_of_subset(remove_index) = [];
 weight_of_path_cell_of_subset(remove_index) = [];
+
+% if two single label paths are same meaning pair, then combine them into one path
+% for example, two root classes are same meaning pair, but in one image, 
+% their descendant classes don't exist in the ground-truth labels, then 
+% the root labels becomes leaf labels
+% one example is class (29, 30) in 12126-th training image (94439.jpg) in espgame
+num_paths = numel(semantic_path_cell_of_subset);
+sm_index_in_subset = [];
+same_meaning_pair = semantic_hierarchy_structure.same_meaning_pair;
+for i = 1:num_paths-1
+    if numel(semantic_path_cell_of_subset{i})==1
+       for j = i+1:num_paths
+          if numel(semantic_path_cell_of_subset{j})==1
+             tag_pair_ij = [semantic_path_cell_of_subset{i}, semantic_path_cell_of_subset{j}];
+             if ~isempty(intersect(tag_pair_ij, same_meaning_pair, 'rows'))
+                sm_index_in_subset = [sm_index_in_subset; i, j];
+             end
+          end
+       end
+    end
+end
+if ~isempty(sm_index_in_subset)
+    for i = 1:size(sm_index_in_subset, 1)
+        id_1 = sm_index_in_subset(i,1);
+        id_2 = sm_index_in_subset(i,2);
+        semantic_path_cell_of_subset{id_1} = [ semantic_path_cell_of_subset{id_1}, semantic_path_cell_of_subset{id_2}];
+        weight_of_path_cell_of_subset{id_1} =[ weight_of_path_cell_of_subset{id_1},weight_of_path_cell_of_subset{id_2}];
+    end
+    remove_index = sm_index_in_subset(:,2)';
+    semantic_path_cell_of_subset(remove_index) = [];
+    weight_of_path_cell_of_subset(remove_index) = [];
+end
  
 end % of function
