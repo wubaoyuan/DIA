@@ -30,7 +30,7 @@ Theta = result_struct_Theta_obj.Theta;
 S = result_struct_Theta_obj.S;
 
 num_instance= size(feature_matrix,1);
-X = single([feature_matrix'; ones(1, num_instance)./result_struct_Theta_obj.options.biasFactor]); 
+X = single([feature_matrix'; ones(1, num_instance)./result_struct_Theta_obj.params.biasFactor]); 
 logit = Theta' * X; 
 qMat = exp(0.5 .* logit);
 
