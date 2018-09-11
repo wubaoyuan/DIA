@@ -24,8 +24,8 @@ class_name = semantic_hierarchy_structure.class_name;
 weight_of_each_class = semantic_path_structure.weight_of_each_class; 
 
 %% load the learned parameter Theta
-Thete_file = dir(['result\', data_name, '\', data_name, '_Theta*']);
-load(Thete_file.name); % result_struct_Theta_obj
+Theta_file = dir(['result\', data_name, '\', data_name, '_Theta*']);
+load(Theta_file.name); % result_struct_Theta_obj, please make sure there is only one mat file named as '_Theta*'; otherwise, you should use 'load(Theta_file(index).name);' to pick one.
 Theta = result_struct_Theta_obj.Theta;
 S = result_struct_Theta_obj.S;
 
